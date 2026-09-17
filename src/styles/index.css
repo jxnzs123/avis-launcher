@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: 79 178 255;
+  --color-accent-soft: 124 199 255;
+  --color-accent-muted: 47 111 163;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3140 transparent;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3140;
+  border-radius: 4px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-lg bg-base-800 px-3 py-2 text-sm text-white placeholder-white/30 ring-1 ring-white/10 transition-shadow focus:ring-2 focus:ring-accent;
+  }
+}
+
+/* Keine Standard-Fokusringe von Buttons/Inputs, wir steuern Fokus visuell selbst */
+button:focus,
+input:focus {
+  outline: none;
+}
