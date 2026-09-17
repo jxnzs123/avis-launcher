@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Avis Downloads Bridge",
+  "version": "1.0.0",
+  "description": "Meldet deine Browser-Downloads an den Avis Launcher, damit sie dort im Downloads-Tab erscheinen.",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_title": "Avis Downloads Bridge"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
